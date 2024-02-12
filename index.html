@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <link href="style.css" rel="stylesheet">
+    <div class="custom-cursor">
+</div>
+
+</head>
+<body>
+
+
+<div>
+<p id='first'> Hello!</p>
+
+
+
+<p id='second'>If you are here, and indeed you are since I can </p>
+    
+<p id='third'> see you, </p>
+
+<p id='fourth'> hear you, </p>
+    
+<p id='fifth'> feel you. </p>
+    
+<p id='sixth'> Then you are truly the chosen one.</p>
+    
+<p id='seventh'>This place holds my tresures and just so you know, I prefer not to share them with others;) </p>
+    
+<p id='eight'>That's why I need to ask you to be very careful with the treasures, so as not to harm, damage or judge them. </p>
+    
+<p id='nine'> Treat whatever you see here with endless Love!</p>
+    
+</div>
+    
+<div>
+<video id='blackhouse' width="1000" height="1000" autoplay loop muted> 
+  <source src="blackhouse.MP4" type="video/mp4">
+</video> 
+ </div>  
+    
+       <div>
+       <video id='whitehouse' width="1000" height="1000" autoplay loop muted> 
+       <source src="whitehousee.MP4" type="video/mp4">
+       </video>
+       </div>
+
+<div class="window" data-image="wind1.jpg" id="window1"></div>
+<div class="window" data-image="wind4.jpg" id="window2"></div>
+<div class="window" data-image="wind3.jpg" id="window3"></div>
+<div class="window" data-image="wind2.jpg" id="window4"></div>
+<div class="window" data-image="wind5.jpg" id="window5"></div>
+<div class="window" data-image="wind6.jpg" id="window6"></div>
+<div class="window" data-image="wind7.jpg" id="window7"></div>
+<div class="window" data-image="wind8.jpg" id="window8"></div>
+<div class="window" data-image="wind9.jpg" id="window9"></div>   
+
+
+
+<div id="windowPopup">
+  <img src="wind1.jpg"s alt="Window Image" id="windowImage">
+</div>
+
+ <div id="windowPopup">
+  <img src="window2.jpg" alt="Window Image" id="windowImage">
+</div>
+    
+
+    
+    
+    
+    
+    <script>
+        
+        
+      document.getElementById("blackhouse").addEventListener("click", function() {
+          
+  document.getElementById("whitehouse").style.display = "block";
+});
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+ // Add click event listeners to all window elements
+document.querySelectorAll(".window").forEach(function(windowElement) {
+  windowElement.addEventListener("click", function() {
+    var imageUrl = windowElement.getAttribute("data-image");
+    document.getElementById("windowImage").src = imageUrl;
+    document.getElementById("windowPopup").style.display = "block";
+  });
+});
+
+// Add click event listener to hide the windowPopup when clicked
+document.getElementById("windowPopup").addEventListener("click", function() {
+  document.getElementById("windowPopup").style.display = "none";
+});
+
+        
+        
+    </script>
+
+    
+    
+    
+</body>
+</html>
